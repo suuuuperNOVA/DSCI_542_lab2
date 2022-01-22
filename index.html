@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>DSCI 542 Lab 2 &#8212; DSCI 542 lab 2</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="#">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">DSCI 542 lab 2</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   DSCI 542 Lab 2
+  </a>
+ </li>
+</ul>
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/suuuuperNOVA/index.html"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/suuuuperNOVA/index.html/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/suuuuperNOVA/index.html/gh-pages?urlpath=tree/index.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   DSCI 542 Lab 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-1">
+   Exercise 1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling-programmers-payments-in-canada-based-on-survey-data">
+   Modeling programmers’ payments in Canada based on survey data
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods">
+     Methods
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#data-preprocessing">
+       Data preprocessing
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#exploratory-data-analysis">
+       Exploratory Data Analysis
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#model">
+       Model
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#result">
+     Result
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#conclusion">
+     Conclusion
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reference">
+     Reference
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="dsci-542-lab-2">
+<h1>DSCI 542 Lab 2<a class="headerlink" href="#dsci-542-lab-2" title="Permalink to this headline">¶</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="exercise-1">
+<h1>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h1>
+<p>The target audiences for this report are the prospective undergraduate students who have limited knowledge in the field of computer science and statistics and graduates who wish to change their profession to computing science. This report is aimed at giving new students a general picture about the payment of being a programmer in Canada. Students who have no clue about their future careers will be interested in this report that shows the most important factors or skills associated with their career prospects based on real data.</p>
+<div style="page-break-after: always;"></div></section>
+<section class="tex2jax_ignore mathjax_ignore" id="modeling-programmers-payments-in-canada-based-on-survey-data">
+<h1>Modeling programmers’ payments in Canada based on survey data<a class="headerlink" href="#modeling-programmers-payments-in-canada-based-on-survey-data" title="Permalink to this headline">¶</a></h1>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>For prospective university students and graduate students who wish to change their career to computing science, which factors are correlated to their future payment levels is the most frequent question in their mind. If they could get a sketch of their future career as being a programmer, they would be able to plan their study and career in a way much closer to the market demand. Here we built a model to predict the income of programmers in Canada by using a multi-linear regression model based on the following features: years of coding experience, programming languages used, education level, and role. After the hyperparameter tuning process, <span class="math notranslate nohighlight">\(R^2\)</span> of the training data set increases from 0.67 to 0.72, and the model is also tested on the testing data set with <span class="math notranslate nohighlight">\(R^2 = 0.71\)</span>, which is consistent with the training result. We discovered that the programming languages mastered are the most important factors in our model, which means that students are better off learning a basket of programming languages such as Java, SQL, Bash, HTML. According to the model built, programmers who are skillful in these languages earn more. Besides, there are 3 points that we want to explore further in the future: to find other explanatory variables that might give us a better score, to include the United States in our model, to identify the best features that contribute to the prediction.</p>
+</section>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>This project intends to build up a linear regression model to predict a programmer’s expected salary based on the survey data from Stack Overflow in the hope that students can get updated with the latest labor market. In a recent decade, there have been many huge leaps in the digital world ranging from computer software to mobile applications, from Google Alpha Go to Facebook Meta, from cash or card payment to e-wallet on smartphones. All these changes accelerate the shifts from one computing skill to the other. Accordingly, technicians’ salaries change with the changing preference of the tech companies. For instance, with customer profiling getting popular, technicians who skill in SQL and Java are more likely to be well-paid. The rapid changes in the labor market have made rookies hard to follow. Students may also come up with questions such as whether programmers who focus on one programming language or who are skillful in a basket of programming languages are paid more in the market. Another popular question is what the payment level can reach after years in this profession. These questions can be categorized into inference and prediction. Finding factors that are associated with the payment level are inference, and using data to estimate the payment level is prediction. This paper mainly focuses on the prediction part, and explanatory variables used are referred from the salary calculator of Stack Overflow.</p>
+<p>There are mainly 3 simple supervised learning methods: decision tree, k-nearest neighbor, and linear regression. Decision trees create a non-parametric model to predict the value of a target variable by learning simple decision rules inferred from the data feature. The learning results can be regarded as a piecewise constant approximation <span id="id1">[<a class="reference internal" href="report.html#id6">Pedregosa <em>et al.</em>, 2011</a>]</span>. Neighbor-based regression is a type of instance-based learning which does not attempt to construct a general internal model, but simply stores instances of the training data and finds the most similar case as the prediction result <span id="id2">[<a class="reference internal" href="report.html#id6">Pedregosa <em>et al.</em>, 2011</a>]</span>. Linear regression is a linear approach for modeling the relationship between a continuous response and one or more explanatory variables, which can be expressed in the form:</p>
+<div class="math notranslate nohighlight">
+\[ 
+    y_{salary} = w^T X + b
+\]</div>
+<p>The most significant difference among them is that the linear regression model can provide a continuous prediction result, whereas decision tree and k-nearest neighbor methods can only provide a discrete result. Moreover, both decision tree and k-nearest neighbor models are non-parametric, but linear regression models are parametric, which have stronger explaining power in terms of the prediction result and the relationship estimated. Therefore, the linear regression model was hired in this project.</p>
+<p>Based on the previous work done by Stack Overflow, factors (education level, location, the language used, job type) used in the <a class="reference external" href="https://stackoverflow.com/jobs/salary">salary calculator</a> are employed directly in the following research.</p>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<section id="data-preprocessing">
+<h3>Data preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this headline">¶</a></h3>
+<p>The data set used in this project is from the <a class="reference external" href="https://insights.stackoverflow.com/survey">Stack Overflow Annual Developer Survey 2019</a>, which is conducted annually. The survey data set has nearly 80,000 responses, collecting respondents’ data from following dimensions in <a class="reference internal" href="#survey-data-dimensions"><span class="std std-numref">Table 1</span></a>:</p>
+<table class="colwidths-auto table" id="survey-data-dimensions">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Summary of data collected in Stack Overflow Annual Developer Survey, 2019</span><a class="headerlink" href="#survey-data-dimensions" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Category</p></th>
+<th class="head"><p>Features</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>developer profile</p></td>
+<td><p>geography, developer roles, years since learning to code, education, undergraduate major, race and ethnicity, gender, age, etc.</p></td>
+</tr>
+<tr class="row-odd"><td><p>technology</p></td>
+<td><p>programming or markup languages, databases, platforms, developers’ primary operating systems, etc.</p></td>
+</tr>
+<tr class="row-even"><td><p>work</p></td>
+<td><p>employment status, company type, company size, career values, hours worked per week, etc.</p></td>
+</tr>
+</tbody>
+</table>
+<p>There are several useful features that could be extracted from this survey such as education level, location, the language used, job type, all of which are potentially associated with annual compensation. As mentioned before, this report is based on the work previously done by the salary calculator of Stack Overflow. Hence, these features are employed in the linear regression model: years of coding experience, programming languages used, education level, and role <span id="id3">[<a class="reference internal" href="report.html#id5">Silge, 2021</a>]</span>.</p>
+<p>Thanks to Stack Overflow, the raw data can be directly downloaded in the format of <code class="docutils literal notranslate"><span class="pre">csv</span></code> and used for free. There is a sufficient amount of data in the file (more than 80,000 rows of data), so missing values were filtered out and outliers which are defined as data points lying out of 5 standard deviations were also removed in the data preprocessing step. Additionally, the data within Canada were used as the project is to predict the salary of programmers in Canada.</p>
+<p>Next, the data set was split into the training and test data sets with a ratio of 8:2 by using the function, <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.train_test_split</span></code>.</p>
+</section>
+<section id="exploratory-data-analysis">
+<h3>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h3>
+<p>After performing EDA on the training data set,  there are several points worth mentioning. The distribution of the response variable, salary, is positively skewed with a fat tail, as shown in Fig. 1 <span id="id4">[<a class="reference internal" href="report.html#id7">VanderPlas <em>et al.</em>, 2018</a>]</span>. This attribute is undesirable, which makes the model less robust. So, extremely high salaries that are out of 5 standard deviations were defined as outliers which were removed in the preprocessing step.<br></p>
+<figure class="align-default" id="salary-density">
+<a class="reference internal image-reference" href="_images/salary_density_plot.png"><img alt="_images/salary_density_plot.png" src="_images/salary_density_plot.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Density plot of annual compensation(USD): The distribution of annual compensation is right skewed with extremely large value as well as extremely small value.</span><a class="headerlink" href="#salary-density" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Among all the features investigated, it can be found that the salary is strongly correlated to the number of professional coding years. Fig.2 clearly shows that there is a linear relationship between the number of professional coding years and the salary. Figure.3 displays both effects of professional coding years and languages mastered on the salary.</p>
+<figure class="align-default" id="code-years-plot">
+<a class="reference internal image-reference" href="_images/code_years_plot.png"><img alt="_images/code_years_plot.png" src="_images/code_years_plot.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Coding year vs. annual compensation(USD): Number of coding years is strongly correlated to compensation, but becomes widely spread when the coding years are greater than 20.</span><a class="headerlink" href="#code-years-plot" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="language-code-years-plot">
+<a class="reference internal image-reference" href="_images/language_codeyears_plot.png"><img alt="_images/language_codeyears_plot.png" src="_images/language_codeyears_plot.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Both effects of languages mastered and coding years on annual compensation: The more languages mastered and the more years in professional experience, the higher compensation expected.</span><a class="headerlink" href="#language-code-years-plot" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Figures below present how other 3 features we selected have significant effects on the income level.</p>
+<figure class="align-default" id="edu-plot">
+<a class="reference internal image-reference" href="_images/edu_plot.png"><img alt="_images/edu_plot.png" src="_images/edu_plot.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Education level vs. annual compensation(USD): Education levels are positively related to compensation.</span><a class="headerlink" href="#edu-plot" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="lang-plot">
+<a class="reference internal image-reference" href="_images/language_plot.png"><img alt="_images/language_plot.png" src="_images/language_plot.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Programming languages vs. annual compensation(USD): Programming languages is associated with compensation. The more programming languages mastered, the higher compensation.</span><a class="headerlink" href="#lang-plot" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="role-plot">
+<a class="reference internal image-reference" href="_images/role_plot.png"><img alt="_images/role_plot.png" src="_images/role_plot.png" style="height: 150px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Roles vs. annual compensation(USD): Roles are related to compensation. Mobile and back-end developers have greater compensation.</span><a class="headerlink" href="#role-plot" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="model">
+<h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
+<p>In light of EDA and previous work of Stack Overflow, 4 features are extracted that are duration for being a profession, education level, programming language worked with and job position. Then, the regression equation can be obtained:<br></p>
+<div class="math notranslate nohighlight">
+\[ 
+    y_{salary} = w^T X + b
+\]</div>
+<p><em>where w is the weight vector, X is the feature vector, b is the error term, <span class="math notranslate nohighlight">\(y_{salary}\)</span> is predicted variable.</em> <br></p>
+<p>Ridge model is chosen in this case, which can help reduce over-fitting problems. Ridge solves a regression model where the loss function is the linear least squares function and regularization is given by the L2-norm.</p>
+<div class="math notranslate nohighlight">
+\[
+    loss\ function = ||y - w^T X||^2_2 + alpha * ||w||^2_2
+\]</div>
+<p><em>where alpha is regularization strength to reduces the variance of the estimates. Larger values specify stronger regularization.</em> <br></p>
+<p>Within the training data set, randomized hyperparameter searching was carried out based on the scoring matrix, <span class="math notranslate nohighlight">\(R^2\)</span>. Then, the model with the best performed parameter was used to make prediction on the test data set. In this case, no feature engineering work was performed in this report, meaning that the number of regressors is fixed. Hence, <span class="math notranslate nohighlight">\(R^2\)</span> was used to evaluate the model instead of <span class="math notranslate nohighlight">\(R_{adjusted}^2\)</span>.</p>
+</section>
+</section>
+<section id="result">
+<h2>Result<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned previously, Ridge model is selected in order to avoid conditioning problems and large estimator coefficients. Firstly, hypeparameterization of alpha is carried out. The hyperparameter tuning result shows that the model is at the best performance when alpha = 0.091 with a training <span class="math notranslate nohighlight">\(R^2\)</span>  of 0.725 as shown in the figure below.</p>
+<figure class="align-default" id="alpha-tuning">
+<a class="reference internal image-reference" href="_images/alpha-tuning.png"><img alt="_images/alpha-tuning.png" src="_images/alpha-tuning.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Hyperparameter searching: the model is well trained when the hyperparameter, alpha, equals to 0.091. With a greater alpha, the model is under-fitted, whereas the model is over-fitted if alpha is getting smaller than 0.091.</span><a class="headerlink" href="#alpha-tuning" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Applying the fitted model to the test data set, we get a testing <span class="math notranslate nohighlight">\(R^2\)</span> of 0.718.<br></p>
+<p>After identifying the most important features, we built multiple linear regression models with the annual salary as our response variable and the following predictors: years of coding experience, programming languages used, education level, and role. Since our target is a continuous variable, regression made sense here.<br></p>
+<p>We carried out hyper-parameter tuning via cross validation with <code class="docutils literal notranslate"><span class="pre">RandomizedSearchCV</span></code>. This allowed us to find optimal parameters which improved our validation score from 67% to 72%. We tested the final model on our test data (20% of the survey data) and the model performed well on the test data with an accuracy of 71%. As you can see in Fig 8, the model is slightly under predicting or over-predicting, but the fit seems to be good. This is a decent score that indicates that our model generalizes enough and should perform well on unseen examples.</p>
+<figure class="align-default" id="test-data-result">
+<a class="reference internal image-reference" href="_images/test_data_result.png"><img alt="_images/test_data_result.png" src="_images/test_data_result.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text">Predicted salary VS. observed salary: the fitted model can fairly predict the salary.</span><a class="headerlink" href="#test-data-result" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Furthermore, by ranking the values of coefficient of regressors in a descending order, it can be found that the programming languages mastered play a more pivotal role as shown in <a class="reference internal" href="#coef-tb"><span class="std std-numref">Table 2</span></a>.</p>
+<table class="colwidths-auto table" id="coef-tb">
+<caption><span class="caption-number">Table 2 </span><span class="caption-text">Top 5 features positively related to the salary</span><a class="headerlink" href="#coef-tb" title="Permalink to this table">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Feature</p></th>
+<th class="head"><p>Coefficient</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Language worked with Java,R,SQL</p></td>
+<td><p>296106</p></td>
+</tr>
+<tr class="row-odd"><td><p>Language worked with Bash,C++,Go,JavaScript,Python,Rust,Scala</p></td>
+<td><p>219395</p></td>
+</tr>
+<tr class="row-even"><td><p>Language worked with Bash, C, Dart, Go,HTML,Java,JavaScript,Python,Ruby,SQL</p></td>
+<td><p>219145</p></td>
+</tr>
+<tr class="row-odd"><td><p>Language worked with Bash,HTML,JavaScript,Python,R,SQL</p></td>
+<td><p>178592</p></td>
+</tr>
+<tr class="row-even"><td><p>Language worked with C#,Java,JavaScript,Python,SQL,Swift</p></td>
+<td><p>150506</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>In brief, our linear regression model uses 4 features (that are years of coding experience, programming languages used, education level, and role) to predict salary. It predicts with a <span class="math notranslate nohighlight">\(R^2\)</span> score of 0.725 on the training data set, which also performs fairly well on the test data set. Meanwhile, our work has shown that the salary is closely related to these 4 features.</p>
+<p>However, there are still limitations in our work. We just used a small part of data from the survey and we are inclined to explore more features to boost the robustness and accuracy of our prediction results. Hence, in the future, we plan to do two important changes; exploring other explanatory variables that might give us a better score, and including the United States in our model. In order to identify the best features that contribute to the prediction, we will include all the sensible columns in the original survey, and perform model and feature selection. We hope that this will help us discover more features that are important for the annual compensation prediction of tech employees.</p>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<p id="id5"><dl class="citation">
+<dt class="label" id="id8"><span class="brackets">PVG+11</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
+<dd><p>F. Pedregosa, G. Varoquaux, A. Gramfort, V. Michel, B. Thirion, O. Grisel, M. Blondel, P. Prettenhofer, R. Weiss, V. Dubourg, J. Vanderplas, A. Passos, D. Cournapeau, M. Brucher, M. Perrot, and E. Duchesnay. Scikit-learn: machine learning in Python. <em>Journal of Machine Learning Research</em>, 12:2825–2830, 2011.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">Sil21</a></span></dt>
+<dd><p>Julia Silge. 2021 developer survey. 2021. URL: <a class="reference external" href="https://insights.stackoverflow.com/survey/2021">https://insights.stackoverflow.com/survey/2021</a> (visited on 2021-11-27).</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id4">VGH+18</a></span></dt>
+<dd><p>Jacob VanderPlas, Brian Granger, Jeffrey Heer, Dominik Moritz, Kanit Wongsuphasawat, Arvind Satyanarayan, Eitan Lees, Ilia Timofeev, Ben Welsh, and Scott Sievert. Altair: interactive statistical visualizations for python. <em>Journal of open source software</em>, 3(32):1057, 2018.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets">Com20</span></dt>
+<dd><p>Executable Books Community. <em>Jupyter Book</em>. February 2020. URL: <a class="reference external" href="https://doi.org/10.5281/zenodo.4539666">https://doi.org/10.5281/zenodo.4539666</a>, <a class="reference external" href="https://doi.org/10.5281/zenodo.4539666">doi:10.5281/zenodo.4539666</a>.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets">HSAC21</span></dt>
+<dd><p>Jiwei Hu, Sanchit Singh, Khalid Abdilahi, and Vera Cui. Salary predictor for tech employees in canada based on survey data. 2021. URL: <a class="reference external" href="https://ubc-mds.github.io/tech_salary_predictor_canada_us/">https://ubc-mds.github.io/tech_salary_predictor_canada_us/</a> (visited on 2021-12-10).</p>
+</dd>
+</dl>
+</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By Vera Cui<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
